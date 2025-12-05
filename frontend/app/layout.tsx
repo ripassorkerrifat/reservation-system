@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-     title: "Product Reservation System",
+     title: "Flash Sale Reservation System",
      description: "Reserve products for 2 minutes with automatic expiration",
 };
 

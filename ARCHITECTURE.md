@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document describes the technical architecture of the Product Reservation System, focusing on expiration mechanisms, concurrency control, database schema, and design trade-offs.
+This document describes the technical architecture of the Flash Sale Reservation System, focusing on expiration mechanisms, concurrency control, database schema, and design trade-offs.
 
 ## Database Schema
 
