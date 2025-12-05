@@ -29,10 +29,11 @@ A full-stack application that allows users to reserve products for exactly 2 min
 
 ### Installation
 
-1. **Clone and navigate to the project**:
+1. **Clone the repository**:
 
      ```bash
-     cd interview-task
+     git clone git@github.com-personal:ripassorkerrifat/reservation-system.git
+     cd reservation-system
      ```
 
 2. **Set up the Backend**:
@@ -125,31 +126,47 @@ A full-stack application that allows users to reserve products for exactly 2 min
 
 ### Running the Application
 
-1. **Start the Backend**:
+**Important**: Make sure PostgreSQL and Redis are running before starting the application.
+
+1. **Start the Backend** (Terminal 1):
 
      ```bash
      cd backend
      npm run start:dev
      ```
 
-     Backend will run on `http://localhost:4000`
+     The backend will start on `http://localhost:4000`
 
-2. **Start the Frontend** (in a new terminal):
+     You should see:
+
+     ```
+     🚀 Backend server running on http://localhost:4000
+     ```
+
+2. **Start the Frontend** (Terminal 2 - new terminal window):
 
      ```bash
      cd frontend
      npm run dev
      ```
 
-     Frontend will run on `http://localhost:3000`
+     The frontend will start on `http://localhost:3000`
+
+     You should see:
+
+     ```
+     ✓ Ready in [time]
+     ○ Local: http://localhost:3000
+     ```
 
 3. **Open your browser**:
-   Navigate to `http://localhost:3000`
+
+     Navigate to `http://localhost:3000` to see the application
 
 ## 📁 Project Structure
 
 ```
-interview-task/
+reservation-system/
 ├── backend/
 │   ├── src/
 │   │   ├── common/
