@@ -1,0 +1,46 @@
+{
+     "name": "backend",
+     "version": "1.0.0",
+     "description": "Reservation system backend",
+     "main": "dist/main.js",
+     "scripts": {
+          "build": "nest build",
+          "start": "nest start",
+          "start:dev": "nest start --watch",
+          "start:debug": "nest start --debug --watch",
+          "start:prod": "node dist/main",
+          "prisma:generate": "prisma generate",
+          "prisma:migrate": "prisma migrate dev",
+          "prisma:studio": "prisma studio",
+          "prisma:seed": "tsx prisma/seed.ts"
+     },
+     "keywords": [],
+     "author": "",
+     "license": "ISC",
+     "type": "commonjs",
+     "dependencies": {
+          "@nestjs/bullmq": "^10.1.1",
+          "@nestjs/common": "^10.3.10",
+          "@nestjs/config": "^3.2.0",
+          "@nestjs/core": "^10.3.10",
+          "@nestjs/platform-express": "^10.3.10",
+          "@prisma/client": "^5.20.0",
+          "bullmq": "^5.4.0",
+          "class-transformer": "^0.5.1",
+          "class-validator": "^0.14.1",
+          "pg": "^8.11.5",
+          "prisma": "^5.20.0",
+          "redis": "^4.6.13",
+          "reflect-metadata": "^0.2.2",
+          "rxjs": "^7.8.1"
+     },
+     "devDependencies": {
+          "@nestjs/cli": "^10.4.1",
+          "@types/express": "^4.17.21",
+          "@types/node": "^20.14.10",
+          "nodemon": "^3.1.0",
+          "ts-node": "^10.9.2",
+          "tsx": "^4.16.2",
+          "typescript": "^5.5.3"
+     }
+}

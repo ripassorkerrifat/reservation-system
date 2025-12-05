@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id             String  @id @default(uuid())
+  name           String
+  price          Float
+  availableStock Int     @default(0)
+  thumbnail      String?
+
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  reservations Reservation[]
+
+  @@map("products")
+}
+
+model Reservation {
+  id        String            @id @default(uuid())
+  productId String
+  product   Product           @relation(fields: [productId], references: [id], onDelete: Cascade)
+  quantity  Int
+  status    ReservationStatus @default(ACTIVE)
+
+  expiresAt DateTime
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+  @@index([expiresAt])
+  @@map("reservations")
+}
+
+enum ReservationStatus {
+  ACTIVE
+  COMPLETED
+  EXPIRED
+}
